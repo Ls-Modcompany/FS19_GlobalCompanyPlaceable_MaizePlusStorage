@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="9" filename="$data/shaders/numberShader.xml"/>
+    <File fileId="1" filename="textures/Material_diffuse.png"/>
+    <File fileId="2" filename="textures/Material_normal.png"/>
+    <File fileId="3" filename="textures/Material_specular.png"/>
+    <File fileId="4" filename="textures/Traeger_diffuse.png"/>
+    <File fileId="5" filename="textures/Traeger_normal.png"/>
+    <File fileId="6" filename="textures/Traeger_specular.png"/>
+    <File fileId="10" filename="textures/details_diffuse.dds"/>
+    <File fileId="11" filename="textures/details_normal.dds"/>
+    <File fileId="12" filename="textures/details_specular.dds"/>
+    <File fileId="8" filename="textures/numbers_diffuse.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Material2" materialId="7">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="lambert1" materialId="4" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="Material11" materialId="5">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="6" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="number_mat" materialId="9" alphaBlending="true" customShaderId="9">
+      <Texture fileId="8"/>
+      <CustomParameter name="number" value="-1 0 0 0"/>
+      <CustomParameter name="numberColor" value="0.0009 0.0021 0.0144 1"/>
+    </Material>
+    <Material name="acmat0" materialId="8">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="storageBulk.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="storage" nodeId="29">
+      <Shape shapeId="1" name="Balken.B.025" static="true" nodeId="30" materialIds="7" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="2" name="torTraeger.001" static="true" nodeId="31" materialIds="5" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="3" name="wand.innen.R.001" translation="0 0.242259 0" scale="1.20258 1 1" static="true" nodeId="32" materialIds="5" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <Shape shapeId="4" name="wand.innen.L.001" translation="0 0.242259 0" scale="1.20258 1 1" static="true" nodeId="33" materialIds="5" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+      <TransformGroup name="area" nodeId="34">
+        <TransformGroup name="start" translation="-7.88028 0 -4.80013" nodeId="35">
+          <TransformGroup name="width" translation="15.746 0 0" nodeId="36"/>
+          <TransformGroup name="hight" translation="0 0 13.6814" nodeId="37"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="seasonMask" nodeId="38">
+        <TransformGroup name="start" translation="-7.88 0 -4.8" nodeId="39">
+          <TransformGroup name="width" translation="15.746 0 0" nodeId="40"/>
+          <TransformGroup name="hight" translation="0 0 11.7497" nodeId="41"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="colis" nodeId="42">
+        <Shape shapeId="5" name="right" translation="-7.3627 0 0" scale="0.360815 0.702817 9.08565" nodeId="43" materialIds="6" nonRenderable="true" distanceBlending="false"/>
+        <Shape shapeId="5" name="left" translation="7.35405 0 0" scale="0.360815 0.702817 9.08565" nodeId="44" materialIds="6" nonRenderable="true" distanceBlending="false"/>
+        <Shape shapeId="5" name="left" translation="0.017215 0 -4.2904" rotation="0 90 0" scale="0.466473 0.702817 14.9779" nodeId="45" materialIds="6" nonRenderable="true" distanceBlending="false"/>
+      </TransformGroup>
+      <TransformGroup name="Tor.R" nodeId="46">
+        <Shape shapeId="6" name="Tor.003" kinematic="true" nodeId="47" materialIds="5" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+        <Shape shapeId="5" name="trigger" translation="-5.0233 1.96212 4.59111" scale="4.77448 4.16341 4" static="true" trigger="true" nodeId="48" materialIds="6" nonRenderable="true" distanceBlending="false"/>
+      </TransformGroup>
+      <TransformGroup name="tor.M" nodeId="49">
+        <Shape shapeId="7" name="Tor.004" kinematic="true" nodeId="50" materialIds="5" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+        <Shape shapeId="5" name="trigger" translation="-0.0940235 1.96212 4.59111" scale="5.19937 4.16341 4" static="true" trigger="true" nodeId="51" materialIds="6" nonRenderable="true" distanceBlending="false"/>
+      </TransformGroup>
+      <TransformGroup name="tor.L" nodeId="52">
+        <Shape shapeId="8" name="Tor.005" kinematic="true" nodeId="53" materialIds="5" castsShadows="true" receiveShadows="true" distanceBlending="false"/>
+        <Shape shapeId="5" name="trigger" translation="5.04318 1.96212 4.59111" scale="4.81788 4.16341 4" static="true" trigger="true" nodeId="54" materialIds="6" nonRenderable="true" distanceBlending="false"/>
+      </TransformGroup>
+      <TransformGroup name="IN" nodeId="55">
+        <TransformGroup name="places" nodeId="56">
+          <Shape shapeId="9" name="Plane01" translation="-5.03 -1.679 -0.159942" rotation="180 90 180" kinematic="true" nodeId="57" materialIds="6" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="10" name="Shovel1" kinematic="true" trigger="true" collisionMask="4294967295" nodeId="58" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </Shape>
+          <TransformGroup name="Display1" translation="-5.00172 4.024 -4.09497" rotation="0 0 -1.3669e-05" nodeId="59">
+            <Shape shapeId="11" name="numberPart1" translation="0.399723 0.1 0.08" clipDistance="75" nodeId="60" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart2" translation="0.309 0.1 0.08" clipDistance="75" nodeId="61" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart3" translation="0.219248 0.1 0.08" clipDistance="75" nodeId="62" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart4" translation="0.129248 0.1 0.08" clipDistance="75" nodeId="63" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart5" translation="0.039248 0.1 0.08" clipDistance="75" nodeId="64" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart6" translation="-0.050752 0.1 0.08" clipDistance="75" nodeId="65" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart7" translation="-0.140752 0.1 0.08" clipDistance="75" nodeId="66" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart8" translation="-0.230752 0.1 0.08" clipDistance="75" nodeId="67" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart9" translation="-0.320752 0.1 0.08" clipDistance="75" nodeId="68" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart10" translation="-0.410752 0.1 0.08" clipDistance="75" nodeId="69" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="13" name="Gehaeuse" scale="0.7 1 1" nodeId="70" materialIds="8" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="14" name="Halterung" translation="4.93438e-09 0.0914671 0.0295773" rotation="0 -0 -1.15023e-06" scale="0.7 1 1" nodeId="71" materialIds="8" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Shape shapeId="15" name="exactFillRootNode1" translation="-4.965 -0.743 0.95338" rotation="0 90 0" static="true" collisionMask="1073741824" nodeId="72" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="16" name="Plane02" translation="0.011 -1.679 -0.159942" rotation="180 90 180" kinematic="true" nodeId="73" materialIds="6" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="17" name="Shovel2" kinematic="true" trigger="true" collisionMask="4294967295" nodeId="74" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </Shape>
+          <TransformGroup name="Display2" translation="-0.0273633 4.024 -4.09497" rotation="0 0 -1.3669e-05" nodeId="75">
+            <Shape shapeId="11" name="numberPart1" translation="0.399723 0.1 0.08" clipDistance="75" nodeId="76" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart2" translation="0.309 0.1 0.08" clipDistance="75" nodeId="77" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart3" translation="0.219248 0.1 0.08" clipDistance="75" nodeId="78" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart4" translation="0.129248 0.1 0.08" clipDistance="75" nodeId="79" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart5" translation="0.039248 0.1 0.08" clipDistance="75" nodeId="80" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart6" translation="-0.050752 0.1 0.08" clipDistance="75" nodeId="81" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart7" translation="-0.140752 0.1 0.08" clipDistance="75" nodeId="82" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart8" translation="-0.230752 0.1 0.08" clipDistance="75" nodeId="83" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart9" translation="-0.320752 0.1 0.08" clipDistance="75" nodeId="84" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart10" translation="-0.410752 0.1 0.08" clipDistance="75" nodeId="85" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="13" name="Gehaeuse" scale="0.7 1 1" nodeId="86" materialIds="8" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="14" name="Halterung" translation="4.93438e-09 0.0914671 0.0295773" rotation="0 -0 -1.15023e-06" scale="0.7 1 1" nodeId="87" materialIds="8" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Shape shapeId="18" name="exactFillRootNode2" translation="0.0356438 -0.743 0.95338" rotation="0 90 0" static="true" collisionMask="1073741824" nodeId="88" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="9" name="Plane03" translation="5.052 -1.679 -0.159942" rotation="180 90 180" kinematic="true" nodeId="89" materialIds="6" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="10" name="Shovel3" kinematic="true" trigger="true" collisionMask="4294967295" nodeId="90" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </Shape>
+          <TransformGroup name="Display3" translation="5.14424 4.024 -4.09497" rotation="0 0 -1.3669e-05" nodeId="91">
+            <Shape shapeId="11" name="numberPart1" translation="0.399723 0.1 0.08" clipDistance="75" nodeId="92" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart2" translation="0.309 0.1 0.08" clipDistance="75" nodeId="93" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart3" translation="0.219248 0.1 0.08" clipDistance="75" nodeId="94" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart4" translation="0.129248 0.1 0.08" clipDistance="75" nodeId="95" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart5" translation="0.039248 0.1 0.08" clipDistance="75" nodeId="96" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart6" translation="-0.050752 0.1 0.08" clipDistance="75" nodeId="97" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart7" translation="-0.140752 0.1 0.08" clipDistance="75" nodeId="98" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart8" translation="-0.230752 0.1 0.08" clipDistance="75" nodeId="99" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart9" translation="-0.320752 0.1 0.08" clipDistance="75" nodeId="100" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="numberPart10" translation="-0.410752 0.1 0.08" clipDistance="75" nodeId="101" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="13" name="Gehaeuse" scale="0.7 1 1" nodeId="102" materialIds="8" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="14" name="Halterung" translation="4.93438e-09 0.0914671 0.0295773" rotation="0 -0 -1.15023e-06" scale="0.7 1 1" nodeId="103" materialIds="8" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Shape shapeId="15" name="exactFillRootNode3" translation="4.90625 -0.743 0.95338" rotation="0 90 0" static="true" collisionMask="1073741824" nodeId="104" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="55">
+      <Attribute name="capacity" type="integer" value="100000"/>
+      <Attribute name="factor" type="float" value="0.8"/>
+      <Attribute name="fillTypes" type="string" value="woodChips"/>
+      <Attribute name="name" type="string" value="Brennstoffe"/>
+      <Attribute name="unit" type="string" value="liter"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

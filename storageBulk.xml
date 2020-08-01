@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_FS19_GlobalCompanyPlaceable_MaizePlusStorage_storageBulk_name</name>
+		<functions>
+            <function>$l10n_FS19_GlobalCompanyPlaceable_MaizePlusStorage_storageBulk_function</function>
+        </functions>
+        <image>store_storage.png</image>
+        <price>22000</price>		
+        <dailyUpkeep>20</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>GCPLACEABLE</brand>
+        <species>placeable</species>
+        <category>globalCompanyPlaceable</category>        
+    </storeData>
+
+    <placeableType>GC_DynamicStoragePlaceable</placeableType>
+    <filename>storageBulk.i3d</filename>
+    <placement testSizeX="15" testSizeZ="20" sizeX="16" sizeZ="20" useRandomYRotation="false" useManualYRotation="true" />
+
+	<clearAreas>
+        <clearArea startNode="4|0" widthNode="4|0|0" heightNode="4|0|1"/>
+    </clearAreas>
+	
+    <leveling requireLeveling="true" maxSmoothDistance="5" maxSlope="30" maxEdgeAngle="20" >
+        <levelAreas>
+            <levelArea startNode="4|0" widthNode="4|0|0" heightNode="4|0|1" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <dynamicStorages>
+		<dynamicStorage indexName="DYNSTORAGE" saveId="globalCompany_dynStorage">					
+			<fillTypes>				
+				<fillType name="WHEAT" />
+				<fillType name="BARLEY" />
+				<fillType name="OAT" />
+				<fillType name="CANOLA" />
+				<fillType name="SUNFLOW" />
+				<fillType name="SOYBEAN" />
+				<fillType name="MAIZE" />
+				<fillType name="POTATO" />
+				<fillType name="SUGARBEET" />
+				<fillType name="SEEDS" />
+				<fillType name="FORAGE" />
+				<fillType name="CHAFF" />
+				<fillType name="WOODCHIPS" />
+				<fillType name="SILAGE" />
+				<fillType name="GRASS" />
+				<fillType name="GRASS_WINDROW" />
+				<fillType name="DRYGRASS" />
+				<fillType name="DRYGRASS_WINDROW" />
+				<fillType name="STRAW" />
+				<fillType name="PIGFOOD" />
+				<fillType name="LIME" />
+				<fillType name="FERTILIZER" />
+                <fillType name="CHOPPEDMAIZE" />
+                <fillType name="CHOPPEDMAIZE_FERMENTED" />
+                <fillType name="GRASS_FERMENTED" />
+                <fillType name="SILOGRASS" />
+                <fillType name="CCM" />
+                <fillType name="CCMRAW" />
+                <fillType name="CLOVER_FERMENTED" />
+                <fillType name="ALFALFA_FERMENTED" />
+                <fillType name="ALFALFA_WINDROW" />
+                <fillType name="DRYALFALFA" />
+                <fillType name="CLOVER_WINDROW" />
+                <fillType name="DRYCLOVER_WINDROW" />
+                <fillType name="CLOVER" />
+                <fillType name="INCARASE_GRASS" />
+                <fillType name="CARROT" />
+                <fillType name="ONION" />
+                <fillType name="STRAWPELLETS" />
+                <fillType name="HAYPELLETS" />
+			</fillTypes>
+			
+			<places>
+				<place capacity="80000">
+                    <shovelFillTrigger node="Shovel1" />
+					<movers>
+						<mover node="Plane01">
+							<translation minimum="-5.03000021 -1.67900002 -0.159942" maximum="-5.03000021 1.378 -0.159942" />
+						</mover>
+					</movers>				
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="Display1" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+                    <unloadingTrigger exactFillRootNode="exactFillRootNode1" />
+				</place>
+				<place capacity="80000">
+                    <shovelFillTrigger node="Shovel2" />
+					<movers>
+						<mover node="Plane02">
+							<translation minimum="0.011 -1.67900002 -0.159942" maximum="0.011 1.378 -0.159942" />
+						</mover>
+					</movers>	
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="Display2" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+                    <unloadingTrigger exactFillRootNode="exactFillRootNode2" />
+				</place>
+				<place capacity="80000">
+                    <shovelFillTrigger node="Shovel3" />
+					<movers>
+						<mover node="Plane03">
+							<translation minimum="5.05200005 -1.67900002 -0.159942" maximum="5.05200005 1.378 -0.159942" />
+						</mover>
+					</movers>	
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="Display3" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+                    <unloadingTrigger exactFillRootNode="exactFillRootNode3" />
+				</place>
+			</places>
+
+            <materials materialHolder="fillPlane_materialHolder.i3d">
+                <value name="wheat" index="0" materialIndex="0" />
+				<value name="barley" index="1" materialIndex="0" />
+				<value name="oat" index="6" materialIndex="0" />
+				<value name="canola" index="3" materialIndex="0" />
+				<value name="sunflower" index="4" materialIndex="0" />
+				<value name="soybean" index="5" materialIndex="0" />
+				<value name="maize" index="2" materialIndex="0" />
+
+				<value name="choppedmaize" index="7" materialIndex="0" />
+				<value name="choppedmaize_fermented" index="8" materialIndex="0" />
+				<value name="grass_fermented" index="9" materialIndex="0" />
+				<value name="silograss" index="10" materialIndex="0" />
+				<value name="ccm" index="11" materialIndex="0" />
+				<value name="ccmraw" index="12" materialIndex="0" />
+
+				<value name="clover_fermented" index="13" materialIndex="0" />
+				<value name="alfalfa_fermented" index="14" materialIndex="0" />
+				<value name="alfalfa_windrow" index="15" materialIndex="0" />
+				<value name="dryalfalfa_windrow" index="16" materialIndex="0" />
+				<value name="clover" index="17" materialIndex="0" />                
+				<value name="clover_windrow" index="18" materialIndex="0" />
+				<value name="dryclover_windrow" index="19" materialIndex="0" />
+				<value name="incarase_grass" index="20" materialIndex="0" />
+				<value name="carrot" index="21" materialIndex="0" />
+				<value name="onion" index="22" materialIndex="0" />    
+
+				<value name="strawpellets" index="23" materialIndex="0" />
+				<value name="haypellets" index="24" materialIndex="0" />
+                
+				<value name="potato" index="25" materialIndex="0" />
+				<value name="sugarbeet" index="26" materialIndex="0" />
+				<value name="seeds" index="27" materialIndex="0" />
+				<value name="forage" index="28" materialIndex="0" />
+				<value name="chaff" index="29" materialIndex="0" />
+				<value name="woodchips" index="30" materialIndex="0" />
+				<value name="silage" index="31" materialIndex="0" />
+				<value name="grass" index="32" materialIndex="0" />
+				<value name="grass_windrow" index="33" materialIndex="0" />
+				<value name="drygrass" index="34" materialIndex="0" />
+				<value name="drygrass_windrow" index="35" materialIndex="0" />
+				<value name="straw" index="36" materialIndex="0" />
+				<value name="pigfood" index="37" materialIndex="0" />
+				<value name="lime" index="38" materialIndex="0" />
+				<value name="fertilizer" index="39" materialIndex="0" />
+            </materials>
+				
+			<i3dMappings>  
+                <i3dMapping id="Plane01" node="10|0|0"/>
+                <i3dMapping id="Shovel1" node="10|0|0|0"/>
+                <i3dMapping id="Display1" node="10|0|1"/>
+                <i3dMapping id="exactFillRootNode1" node="10|0|2"/>
+                <i3dMapping id="Plane02" node="10|0|3"/>
+                <i3dMapping id="Shovel2" node="10|0|3|0"/>
+                <i3dMapping id="Display2" node="10|0|4"/>
+                <i3dMapping id="exactFillRootNode2" node="10|0|5"/>
+                <i3dMapping id="Plane03" node="10|0|6"/>
+                <i3dMapping id="Shovel3" node="10|0|6|0"/>
+                <i3dMapping id="Display3" node="10|0|7"/>
+                <i3dMapping id="exactFillRootNode3" node="10|0|8"/>	
+			</i3dMappings>				
+		</dynamicStorage>
+	</dynamicStorages>
+	
+	<animatedObjects>
+        <animatedObject saveId="Tor1" >
+            <animation duration="3">
+                <part node="7|0">
+                <keyFrame time="0" translation="0 0 0" />
+                <keyFrame time="1" translation="4.75 0 0" />
+                </part>
+            </animation>
+            <controls triggerNode="7|1" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gate_loop.wav" loops="0" linkNode="7|0" volume="0.8" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gate_opened.wav" linkNode="7|1" volume="0.8" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gate_closed.wav" linkNode="7|1" volume="0.8" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>		
+        <animatedObject saveId="Tor2" >
+            <animation duration="3">
+                <part node="8|0">
+                <keyFrame time="0" translation="0 0 0" />
+                <keyFrame time="1" translation="4.915 0 0" />
+                </part>
+            </animation>
+            <controls triggerNode="8|1" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gate_loop.wav" loops="0" linkNode="8|0" volume="0.8" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gate_opened.wav" linkNode="8|1" volume="0.8" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gate_closed.wav" linkNode="8|1" volume="0.8" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>	
+        <animatedObject saveId="Tor3" >
+            <animation duration="3">
+                <part node="9|0">
+                <keyFrame time="0" translation="0 0 0" />
+                <keyFrame time="1" translation="-4.798 0 0" />
+                </part>
+            </animation>
+            <controls triggerNode="9|1" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving file="$data/sounds/prefab/gate/gate_loop.wav" loops="0" linkNode="9|0" volume="0.8" radius="25" innerRadius="3" fadeOut="0.25"/>
+                <posEnd file="$data/sounds/prefab/gate/gate_opened.wav" linkNode="9|1" volume="0.8" radius="25" innerRadius="3" />
+                <negEnd file="$data/sounds/prefab/gate/gate_closed.wav" linkNode="9|1" volume="0.8" radius="25" innerRadius="3" />
+            </sounds>
+        </animatedObject>		
+    </animatedObjects>	
+	
+	<seasons>
+        <maskAreas>
+            <maskArea startNode="5|0" widthNode="5|0|0" heightNode="5|0|1" />
+        </maskAreas>
+    </seasons>
+
+    <tipOcclusionUpdateArea sizeX="15" sizeZ="20" />
+</placeable>

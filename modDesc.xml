@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="51">
+    <author>LS-Modcompany / Sh0rrty, kevink98</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>GlobalCompany - MaizePlus Storage</en>
+        <de>GlobalCompany - MaisePlus Lager</de>
+    </title>
+    <description>
+        <en><![CDATA[Bulk goods hall for the storage of loose material.
+
+Capacity/box: 80.000 litres
+Costs: 22.000 €
+Maintenance costs: 20 € / day
+
+These fruits are accepted:
+Wheat, barley, oat, canola, sunflower, soybeans, maize, potatoes, sugarbeet, seeds, forage, chaff,
+woodchips, silage, grass, hay, straw, pigfood, lime, fertilizer, chopped maize, maize silage, grass silage, silage grass, 
+CCM, maize grain meal (fresh), clover silage, lucerne silage, alfalfa, lucerne hay, clover, clover hay, incarase grass,
+carrots, onions, straw pellets and hay pellets
+
+Information: Mod only playable in combination with GlobalCompany!]]></en>
+        <de><![CDATA[Schüttguthalle für die Lagerung von losem Material.
+
+Kapazität/Box: 80.000 Liter
+Kosten: 22.000 €
+Unterhaltskosten: 20 € / Tag
+
+Diese Früchte werden aktzeptiert:
+Weizen, Gerste, Hfer, Raps, Sonnenblumen, Sojabohnen, Mais, Kartoffeln, Zuckerrüben, Saatgut, Mischfutter, Häckselgut,
+Hackschnitzel, Silage, Gras, Heu, Stroh, Schweinefutter, Kalk, Dünger, Gehäckselter Mais, Maissilage, Grassilage, Silogras, 
+CCM, Maiskornschrot (frisch), Kleesilage, Luzernesilage, Luzerne, Luzerne Heu, Klee, Klee Heu, Vermehrungsgras,
+Karotten, Zwiebeln, Strohpellts und Heupellets
+
+Information: Mod nur in Verbindung mit GlobalCompany spielbar!]]></de>
+    </description>
+    <iconFilename>icon_storage.png</iconFilename>
+    <multiplayer supported="true"/>
+	
+    <storeItems>
+        <storeItem xmlFilename="storageBulk.xml"/>
+    </storeItems>
+	
+	<extraSourceFiles>
+		<sourceFile filename="GC_Checker.lua" />
+    </extraSourceFiles>
+	
+	<globalCompany minimumVersion="1.7.0.0" />
+
+    <brands>
+        <brand name="GCPLACEABLE" title="GlobalCompany Placeable" image="../FS19_GlobalCompany/brand_placeable.dds"/>
+    </brands>
+</modDesc>

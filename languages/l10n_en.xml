@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+	<elements>
+		<e k="FS19_GlobalCompanyPlaceable_MaizePlusStorage_storageBulk_name" v="Bulk material storage"/>
+		<e k="FS19_GlobalCompanyPlaceable_MaizePlusStorage_storageBulk_function" v="All standard fruit and fruit from MaisePlus can be stored in this warehouse."/>
+	</elements>
+</l10n>

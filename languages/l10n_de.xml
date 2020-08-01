@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+	<elements>
+		<e k="FS19_GlobalCompanyPlaceable_MaizePlusStorage_storageBulk_name" v="Schüttgutlager"/>
+		<e k="FS19_GlobalCompanyPlaceable_MaizePlusStorage_storageBulk_function" v="In diesem Lager können alle Standardfrüchte und Früchte von MaisePlus gelagert werden."/>
+	</elements>
+</l10n>
